@@ -1,1 +1,2 @@
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
+C:\Users\Derek\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
