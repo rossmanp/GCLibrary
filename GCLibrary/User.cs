@@ -7,17 +7,7 @@ using System.Threading.Tasks;
 namespace GCLibrary
 {
     class User
-    {
-<<<<<<< HEAD
-        public bool CheckoutBook(Book book)
-        {
-            return book.IsCheckedOut = true;
-||||||| merged common ancestors
-
-        public bool CheckoutBook(Book book)
-        {
-            return book.IsCheckedOut = true;
-=======
+    {      
         static string bookCheck;
         static string bookCheckKeepCase;
 
@@ -45,7 +35,6 @@ namespace GCLibrary
                 }          
             }
            Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");         
->>>>>>> d36a4478eecb0ad02711d0fa4f0bf4d9726e0de9
         }
 
         public static void ReturnBook(List<Book> shelf)
@@ -103,6 +92,4 @@ namespace GCLibrary
         }
     }
     
-
-
 }

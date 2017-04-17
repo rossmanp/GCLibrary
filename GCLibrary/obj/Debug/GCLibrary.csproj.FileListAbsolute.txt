@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.pdb
@@ -8,18 +7,3 @@ c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrar
 C:\Users\antho\Desktop\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
 C:\Users\antho\Desktop\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
 C:\Users\antho\Desktop\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
-||||||| merged common ancestors
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.pdb
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.csprojResolveAssemblyReference.cache
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
-c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
-=======
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.pdb
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.csprojResolveAssemblyReference.cache
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
-C:\Users\peter\OneDrive\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
->>>>>>> d36a4478eecb0ad02711d0fa4f0bf4d9726e0de9
