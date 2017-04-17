@@ -8,10 +8,10 @@ namespace GCLibrary
 {
     public class Book
     {
-<<<<<<< HEAD
+
         private string title;
         private string author;
-        private bool checkedOut;
+        private bool checkedOut; 
         private DateTime? due;
 
         public Book(string t, string a)
@@ -38,6 +38,11 @@ namespace GCLibrary
         public bool getCheckedOut()
         {
             return this.checkedOut;
+        }
+
+        public void setCheckedOut(bool checkout)
+        {
+            this.checkedOut = checkout;
         }
 
         //retreive due date of checked out book if its checked out
@@ -71,17 +76,5 @@ namespace GCLibrary
             return outputString;
         }
 
-||||||| merged common ancestors
-=======
-        public string title { get; private set; }
-        public bool checkedOut { get; set; }
-
-        public Book(string title, bool checkedOut)
-        {
-            this.title = title;
-            this.checkedOut = checkedOut;
-        }
-
->>>>>>> d2793c421f9678eccf26c8df4e9a882ae873850a
     }
 }

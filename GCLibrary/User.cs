@@ -11,32 +11,33 @@ namespace GCLibrary
         static string bookCheck;
         static string bookCheckKeepCase;
 
-        public static bool CheckoutBook(List<Book> shelf)
+        public static void CheckoutBook(List<Book> shelf)
         {           
             Console.WriteLine("Which book would you like to checkout?");
            
             bookCheck = Console.ReadLine();
             bookCheckKeepCase = bookCheck;
             bookCheck = bookCheck.ToLower();
+
             //This loop checks each book in the shelf, and if the book is not checked out
             //and the user input matches the book's title, the book is checked out.
 
             foreach (Book b in shelf)
             {
-                if (b.checkedOut == false)
+                if (b.getCheckedOut() == false)
                 {
-                    if (bookCheck.Equals(b.title.ToLower()))
+                    if (bookCheck.Equals(b.getTitle().ToLower()))
                     {
                         Console.WriteLine("You have checked out " + bookCheckKeepCase + ".");
-                        return b.checkedOut = true;
+                        b.setCheckedOut(true);
+                        return;
                     }
                 }          
             }
-           Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");
-           return false;
+           Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");         
         }
 
-        public static bool ReturnBook(List<Book> shelf)
+        public static void ReturnBook(List<Book> shelf)
         {
             Console.WriteLine("Which book would you like to return?");
             bookCheck = Console.ReadLine();
@@ -48,17 +49,18 @@ namespace GCLibrary
 
             foreach (Book b in shelf)
             {
-                if (b.checkedOut == true)
+                if (b.getCheckedOut() == true)
                 {
-                    if (bookCheck.Equals(b.title.ToLower()))
+                    if (bookCheck.Equals(b.getTitle().ToLower()))
                     {
-                        Console.WriteLine("You have returned " + b.title + ".");
-                        return b.checkedOut = false;
+                        Console.WriteLine("You have returned " + bookCheckKeepCase + ".");
+                        b.setCheckedOut(false);
+                        return;
                     }
                 }
             }
             Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
-            return true;
+           
         }
     }
 }
