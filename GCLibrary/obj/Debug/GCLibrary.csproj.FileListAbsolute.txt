@@ -4,3 +4,6 @@ c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrar
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.csprojResolveAssemblyReference.cache
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
+C:\Users\antho\Desktop\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
+C:\Users\antho\Desktop\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
+C:\Users\antho\Desktop\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
