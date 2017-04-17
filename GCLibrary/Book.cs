@@ -8,5 +8,12 @@ namespace GCLibrary
 {
     class Book
     {
+        public bool IsCheckedOut { get; set; }
+
+        Book()
+        {
+            
+        }
+
     }
 }

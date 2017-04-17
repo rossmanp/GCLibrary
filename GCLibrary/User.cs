@@ -8,5 +8,15 @@ namespace GCLibrary
 {
     class User
     {
+
+        public bool CheckoutBook(Book book)
+        {
+            return book.IsCheckedOut = true;
+        }
+
+        public bool ReturnBook(Book book)
+        {
+            return book.IsCheckedOut = false;
+        }
     }
 }
