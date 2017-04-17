@@ -63,30 +63,27 @@ namespace GCLibrary
                         User.ReturnBook(shelf);                       
                         break;
                     case 6:
-                        Console.WriteLine("Goodbye!");
-                        run = false;
+                        run = Continue();
                         break;
                     default:
                         Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
                         break;
                 }                        
-                run = Continue();
             }
 
         }
 
         public static Boolean Continue()
         {
-            Console.WriteLine("Continue? (Y/N): ");
-            string input = Console.ReadLine();
+            Console.WriteLine("Are you sure you want to exit? (Y/N): ");
+            string input = Console.ReadLine().ToLower();
             Boolean run = true;
-            input = input.ToLower();
-            if (input == "n")
+            if (input.Equals("y"))
             {
                 Console.WriteLine("Goodbye!");
                 run = false;
             }
-            else if (input == "y")
+            else if (input.Equals("n"))
             {
                 run = true;
             }
