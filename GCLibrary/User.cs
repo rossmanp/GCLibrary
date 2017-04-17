@@ -9,12 +9,15 @@ namespace GCLibrary
     class User
     {
         static string bookCheck;
+        static string bookCheckKeepCase;
 
         public static bool CheckoutBook(List<Book> shelf)
         {           
             Console.WriteLine("Which book would you like to checkout?");
-            bookCheck = Console.ReadLine().ToLower();
-
+           
+            bookCheck = Console.ReadLine();
+            bookCheckKeepCase = bookCheck;
+            bookCheck = bookCheck.ToLower();
             //This loop checks each book in the shelf, and if the book is not checked out
             //and the user input matches the book's title, the book is checked out.
 
@@ -24,7 +27,7 @@ namespace GCLibrary
                 {
                     if (bookCheck.Equals(b.title.ToLower()))
                     {
-                        Console.WriteLine("You have checked out " + b.title + ".");
+                        Console.WriteLine("You have checked out " + bookCheckKeepCase + ".");
                         return b.checkedOut = true;
                     }
                 }          
@@ -36,7 +39,9 @@ namespace GCLibrary
         public static bool ReturnBook(List<Book> shelf)
         {
             Console.WriteLine("Which book would you like to return?");
-            bookCheck = Console.ReadLine().ToLower();
+            bookCheck = Console.ReadLine();
+            bookCheckKeepCase = bookCheck;
+            bookCheck = bookCheck.ToLower();
 
             //This loop checks each book in the shelf, and if the book is checked out
             //and the user input matches the book's title, the book is returned.
@@ -52,7 +57,7 @@ namespace GCLibrary
                     }
                 }
             }
-            Console.WriteLine("I'm sorry, we don't have a record of " + bookCheck + " in our library.");
+            Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
             return true;
         }
     }

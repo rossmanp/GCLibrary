@@ -17,6 +17,7 @@ namespace GCLibrary
         {
             Console.WriteLine("Welcome to the Grand Circus Library!");
             List<Book> shelf = new List<Book>();
+            shelf.Add(new Book("example", false));
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;
@@ -32,8 +33,7 @@ namespace GCLibrary
                     IsNotInt = false;
                     try
                     {
-                        choice = int.Parse(Console.ReadLine());
-                        
+                        choice = int.Parse(Console.ReadLine());                       
                     }                 
                     catch (Exception)
                     {
@@ -63,10 +63,11 @@ namespace GCLibrary
                         User.ReturnBook(shelf);                       
                         break;
                     case 6:
-                        Console.WriteLine("Exit the library");
+                        Console.WriteLine("Goodbye!");
+                        run = false;
                         break;
                     default:
-                        Console.WriteLine("Error, Default case hit");
+                        Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
                         break;
                 }
                 Console.ReadLine();              
@@ -92,7 +93,7 @@ namespace GCLibrary
             }
             else
             {
-                Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");
+              Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");
               run = Continue();
             }
 

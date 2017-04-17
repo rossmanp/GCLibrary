@@ -9,3 +9,5 @@ c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrar
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
 >>>>>>> d2793c421f9678eccf26c8df4e9a882ae873850a
+C:\Users\Derek\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
+C:\Users\Derek\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
