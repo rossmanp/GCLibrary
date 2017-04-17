@@ -8,6 +8,16 @@ namespace GCLibrary
 {
     class User
     {
+<<<<<<< HEAD
+        public bool CheckoutBook(Book book)
+        {
+            return book.IsCheckedOut = true;
+||||||| merged common ancestors
+
+        public bool CheckoutBook(Book book)
+        {
+            return book.IsCheckedOut = true;
+=======
         static string bookCheck;
         static string bookCheckKeepCase;
 
@@ -35,6 +45,7 @@ namespace GCLibrary
                 }          
             }
            Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");         
+>>>>>>> d36a4478eecb0ad02711d0fa4f0bf4d9726e0de9
         }
 
         public static void ReturnBook(List<Book> shelf)
@@ -63,4 +74,35 @@ namespace GCLibrary
            
         }
     }
+     public class Search
+    {
+        public string name;
+        public int id;
+        public string title;
+
+        public Search(string name, int id, string title)
+        {
+            this.name = name;
+            this.id = id;
+            this.title = title;
+        }
+        public string Name
+        {
+            get { return name; }
+            private set { name = value; }
+        }
+        public int Id
+        {
+            get { return id; }
+            private set { id = value; }
+        }
+        public string Title
+        {
+            get { return title; }
+            private set { title = value; }
+        }
+    }
+    
+
+
 }
