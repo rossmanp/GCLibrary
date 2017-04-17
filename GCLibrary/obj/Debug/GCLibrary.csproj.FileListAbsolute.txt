@@ -1,2 +1,11 @@
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
+<<<<<<< HEAD
 C:\Users\Derek\Documents\Visual Studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe.config
+||||||| merged common ancestors
+=======
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\bin\Debug\GCLibrary.pdb
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.csprojResolveAssemblyReference.cache
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLibrary\GCLibrary\obj\Debug\GCLibrary.pdb
+>>>>>>> d2793c421f9678eccf26c8df4e9a882ae873850a

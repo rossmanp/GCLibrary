@@ -8,6 +8,7 @@ namespace GCLibrary
 {
     class Book
     {
+<<<<<<< HEAD
         private string title;
         private string author;
         private bool checkedOut;
@@ -70,5 +71,16 @@ namespace GCLibrary
             return outputString;
         }
 
+||||||| merged common ancestors
+=======
+        public string title { get; private set; }
+        public bool checkedOut { get; set; }
+
+        Book()
+        {
+            
+        }
+
+>>>>>>> d2793c421f9678eccf26c8df4e9a882ae873850a
     }
 }
