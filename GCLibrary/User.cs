@@ -7,7 +7,58 @@ using System.Threading.Tasks;
 namespace GCLibrary
 {
     class User
-    {      
+    {          
+        public User() { }
+
+        public static void ListBooks(List<Book> books)
+        {
+            Console.WriteLine("\nAvailable Titles:");
+            Console.WriteLine("===============================");
+            for (int i = 0; i < books.Count; i++)
+            {
+                string title = books[i].getTitle();
+                string author = books[i].getAuthor();
+                string checkoutStatus;
+                string dueDate;
+
+                bool isCheckedOut = books[i].getCheckedOut();
+
+                //Set values of checkoutStatus and dueDate strings
+                if (isCheckedOut == true)
+                {
+                    checkoutStatus = "Checked out";
+                    if(books[i].getDue() != null)
+                    {
+                        dueDate = books[i].getDue().Value.ToString("MM/dd/yyyy");
+                    }
+                    else
+                    {
+                        dueDate = "N/A";
+                    }
+                }
+                else
+                {
+                    checkoutStatus = "Available";
+                    dueDate = "N/A";
+                }
+
+                //Display book information (Shelf index, Title, Author, Checkout status, Due Date)
+                Console.WriteLine("#" + (i + 1) + ":");
+
+                //Warn user if checked out book is overdue
+                if (isCheckedOut == true && DateTime.Now > books[i].getDue())
+                {
+                    Console.WriteLine("***This book is overdue! Please return as soon as possible!***");
+                }
+
+                Console.WriteLine("Title: " + title);
+                Console.WriteLine("Author: " + author);
+                Console.WriteLine("Status: " + checkoutStatus);
+                Console.WriteLine("Due Date: " + dueDate + "\n");
+            }
+        }
+
+
         static string bookCheck;
         static string bookCheckKeepCase;
 
@@ -30,6 +81,8 @@ namespace GCLibrary
                     {
                         Console.WriteLine("You have checked out " + bookCheckKeepCase + ".");
                         b.setCheckedOut(true);
+                        DateTime d = DateTime.Now.AddDays(14);
+                        b.setDue(d);
                         return;
                     }
                 }          
@@ -60,9 +113,9 @@ namespace GCLibrary
                 }
             }
             Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
-           
         }
     }
+
      public class Search
     {
         public string name;
@@ -91,5 +144,5 @@ namespace GCLibrary
             private set { title = value; }
         }
     }
-    
+   
 }
