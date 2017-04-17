@@ -41,8 +41,7 @@ namespace GCLibrary
                         IsNotInt = true;
                     }                    
                 }
-                IsNotInt = true;
-                Console.WriteLine(choice);
+                IsNotInt = true;                
                 switch (choice)
                 {
                     case 1:
@@ -69,8 +68,7 @@ namespace GCLibrary
                     default:
                         Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
                         break;
-                }
-                Console.ReadLine();              
+                }                        
                 run = Continue();
             }
 
