@@ -8,7 +8,7 @@ namespace GCLibrary
 {
     class Shelf
     {
-        public List<Book> books;
+        private List<Book> books;
 
         public Shelf()
         {
@@ -27,6 +27,11 @@ namespace GCLibrary
                 new Book("Children of Dune", "Frank Herbert"),
                 new Book("The Scarlet Letter", "Nathaniel Hawthorne")
             };
+        }
+
+        public List<Book> GetBooks()
+        {
+            return books;
         }
     }
 }
