@@ -27,7 +27,6 @@ namespace GCLibrary
                 if (isCheckedOut == true)
                 {
                     checkoutStatus = "Checked out";
-                    //(books[i].getDue() != null) ? dueDate = books[i].getDue().Value.ToString("MM/dd/yyyy") : "N/A");
                     if(books[i].getDue() != null)
                     {
                         dueDate = books[i].getDue().Value.ToString("MM/dd/yyyy");
