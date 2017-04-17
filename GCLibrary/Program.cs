@@ -49,6 +49,7 @@ namespace GCLibrary
                         break;
                     case 2:
                         Console.WriteLine("Search for a book by author");
+                        (Console.ReadLine());
                         break;
                     case 3:
                         Console.WriteLine("Search for a book by title");
