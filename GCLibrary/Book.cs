@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GCLibrary
 {
-    class Book
+    public class Book
     {
 <<<<<<< HEAD
         private string title;
@@ -76,9 +76,10 @@ namespace GCLibrary
         public string title { get; private set; }
         public bool checkedOut { get; set; }
 
-        Book()
+        public Book(string title, bool checkedOut)
         {
-            
+            this.title = title;
+            this.checkedOut = checkedOut;
         }
 
 >>>>>>> d2793c421f9678eccf26c8df4e9a882ae873850a
