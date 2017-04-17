@@ -17,7 +17,7 @@ namespace GCLibrary
         {
             Console.WriteLine("Welcome to the Grand Circus Library!");
             List<Book> shelf = new List<Book>();
-            shelf.Add(new Book("example", false));
+            shelf.Add(new Book("example", "guy"));
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;
