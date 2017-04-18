@@ -26,8 +26,9 @@ namespace GCLibrary
                 Console.WriteLine("Choose an option:");
                 Console.WriteLine("1 - Display book list \n2 - Search for a book by author");
                 Console.WriteLine("3 - Search for a book by title \n4 - Check out a book");
-                Console.WriteLine("5 - Return a book \n6 - Exit the library");
-                Console.WriteLine("Choice (1-6):");
+                Console.WriteLine("5 - Return a book \n6 - Exit the library \n7 - Save the book list");
+                Console.WriteLine("6 - Load the book list");
+                Console.WriteLine("Choice (1-8):");
                 while (IsNotInt)
                 {
                     IsNotInt = false;
@@ -37,7 +38,7 @@ namespace GCLibrary
                     }                 
                     catch (Exception)
                     {
-                        Console.WriteLine("Error: Invalid input. Please enter a number from 1 to 6:");
+                        Console.WriteLine("Error: Invalid input. Please enter a number from 1 to 8:");
                         IsNotInt = true;
                     }                    
                 }
@@ -74,7 +75,7 @@ namespace GCLibrary
                         //need to load the book list
                         break;
                     default:
-                        Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
+                        Console.WriteLine("Error, you did not input a number from 1-8. Please try again.");
                         break;
                 }                        
             }
