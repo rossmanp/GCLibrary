@@ -71,7 +71,7 @@ namespace GCLibrary
         public void setDue(DateTime d)
         {
             this.due = d;
-            Console.WriteLine("Your due date is: " + due + ".");
+            Console.WriteLine("Your due date is: " + due.Value.ToString("d") + ".");
         }
 
         //create string to output to file
