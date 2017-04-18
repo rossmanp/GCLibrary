@@ -21,7 +21,6 @@ namespace GCLibrary
             this.checkedOut = false;
             this.due = null;
         }
-
         //get book's title
         public string getTitle()
         {
@@ -65,7 +64,6 @@ namespace GCLibrary
             this.due = d;
             Console.WriteLine("Your due date is: " + due + ".");
         }
-
         public string toExportString()
         {
             string outputString = "";

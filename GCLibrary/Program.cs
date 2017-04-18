@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GCLibrary
 { //This is the Midterm Project for Group 2
-  //Othelle McMaster
+  //Othelle McAllister
   //Derek Wolters
   //Mike Spisich
   //Pete Rossman
@@ -17,10 +17,11 @@ namespace GCLibrary
         {
             Console.WriteLine("Welcome to the Grand Circus Library!");
             List<Book> shelf = new List<Book>();
-            shelf.Add(new Book("example", "guy"));
+            //shelf.Add(new Book("example", "guy"));
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;
+
             while (run)
             {
                 Console.WriteLine("Choose an option:");
@@ -49,7 +50,8 @@ namespace GCLibrary
                         break;
                     case 2:
                         Console.WriteLine("Search for a book by author");
-                        (Console.ReadLine());
+                        string writer = Console.ReadLine();
+                        User.SearchAuthor(writer, shelf);
                         break;
                     case 3:
                         Console.WriteLine("Search for a book by title");
@@ -72,9 +74,7 @@ namespace GCLibrary
                 }                        
                 run = Continue();
             }
-
         }
-
         public static Boolean Continue()
         {
             Console.WriteLine("Continue? (Y/N): ");
@@ -95,7 +95,6 @@ namespace GCLibrary
               Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");
               run = Continue();
             }
-
             return run;
         }
     }

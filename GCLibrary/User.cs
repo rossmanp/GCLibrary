@@ -8,13 +8,61 @@ namespace GCLibrary
 {
     class User
     {
-            static string bookCheck;
-            static string bookCheckKeepCase;
-        
+        public static void ListBooks(List<Book> books)
+        {
+            Console.WriteLine("\nAvailable Titles:");
+            Console.WriteLine("===============================");
+            for (int i = 0; i < books.Count; i++)
+            {
+                string title = books[i].getTitle();
+                string author = books[i].getAuthor();
+                string checkoutStatus;
+                string dueDate;
+
+                bool isCheckedOut = books[i].getCheckedOut();
+
+                //Set values of checkoutStatus and dueDate strings
+                if (isCheckedOut == true)
+                {
+                    checkoutStatus = "Checked out";
+                    if (books[i].getDue() != null)
+                    {
+                        dueDate = books[i].getDue().Value.ToString("MM/dd/yyyy");
+                    }
+                    else
+                    {
+                        dueDate = "N/A";
+                    }
+                }
+                else
+                {
+                    checkoutStatus = "Available";
+                    dueDate = "N/A";
+                }
+
+                //Display book information (Shelf index, Title, Author, Checkout status, Due Date)
+                Console.WriteLine("#" + (i + 1) + ":");
+
+                //Warn user if checked out book is overdue
+                if (isCheckedOut == true && DateTime.Now > books[i].getDue())
+                {
+                    Console.WriteLine("***This book is overdue! Please return as soon as possible!***");
+                }
+
+                Console.WriteLine("Title: " + title);
+                Console.WriteLine("Author: " + author);
+                Console.WriteLine("Status: " + checkoutStatus);
+                Console.WriteLine("Due Date: " + dueDate + "\n");
+            }
+        }
+
+        static string bookCheck;
+        static string bookCheckKeepCase;
+
         public static void CheckoutBook(List<Book> shelf)
-        {           
+        {
             Console.WriteLine("Which book would you like to checkout?");
-           
+
             bookCheck = Console.ReadLine();
             bookCheckKeepCase = bookCheck;
             bookCheck = bookCheck.ToLower();
@@ -32,10 +80,9 @@ namespace GCLibrary
                         b.setCheckedOut(true);
                         return;
                     }
-                }          
+                }
             }
-           Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");         
-
+            Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");
         }
 
         public static void ReturnBook(List<Book> shelf)
@@ -61,18 +108,26 @@ namespace GCLibrary
                 }
             }
             Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
-  
         }
-    }
-     public string GetAuthor()
-    {
-        return author;
-    }
-    public string GetTitle()
-    {
-        return title;
-    }
-    
+            //string s is or search
+            //b for book
+            public static void SearchAuthor(string s, List<Book> bookshelf)
+            {
+                foreach (Book book in bookshelf)
+                {
+                string author = book.getAuthor();
+                    if (s.Equals(author))
+                    {
+                       Console.WriteLine(book.getTitle() + book.getAuthor()); 
+                    }
+                }                
+            }
+           /* public string GetTitle()
+            {
+                var title = new Book();
+                title.getTitle();
+            }*/
+        
 
-
+    }
 }
