@@ -16,8 +16,9 @@ namespace GCLibrary
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Grand Circus Library!");
-            Shelf s = new Shelf();
-            List<Book> shelf = s.GetBooks();
+            //Shelf s = new Shelf();
+            List<Book> shelf = new List<Book>(); 
+            FileIO.importShelf(shelf);
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;
@@ -70,7 +71,7 @@ namespace GCLibrary
                         break;
                     case 6:
                         Console.WriteLine("Book list loaded");
-                        //need to load the book list
+                        FileIO.importShelf(shelf);
                         break;
                     case 7:
                         Console.WriteLine("Book list saved");

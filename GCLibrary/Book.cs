@@ -21,6 +21,14 @@ namespace GCLibrary
             this.checkedOut = false;
             this.due = null;
         }
+
+        public Book(string t, string a, bool c, DateTime? d)
+        {
+            this.title = t;
+            this.author = a;
+            this.checkedOut = c;
+            this.due = d;
+        }
         //get book's title
         public string getTitle()
         {
@@ -62,7 +70,7 @@ namespace GCLibrary
         public void setDue(DateTime d)
         {
             this.due = d;
-            Console.WriteLine("Your due date is: " + due + ".");
+            Console.WriteLine("Your due date is: " + due.Value.ToString("d") + ".");
         }
 
         //create string to output to file

@@ -1,4 +1,4 @@
-1984,George Orwell,False,
+1984,DEREKGeorge Orwell,False,
 Animal Farm,George Orwell,False,
 The Lord of the Rings: The Fellowship of the Ring,J.R.R. Tolkien,False,
 The Lord of the Rings: The Two Towers,J.R.R. Tolkien,False,
