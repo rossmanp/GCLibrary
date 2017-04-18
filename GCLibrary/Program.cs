@@ -16,8 +16,8 @@ namespace GCLibrary
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Grand Circus Library!");
-            List<Book> shelf = new List<Book>();
-            //shelf.Add(new Book("example", "guy"));
+            Shelf s = new Shelf();
+            List<Book> shelf = s.GetBooks();
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;
@@ -47,15 +47,18 @@ namespace GCLibrary
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("Display book list");
+                        Console.WriteLine("Book list:");
+                        User.ListBooks(shelf);
                         break;
                     case 2:
                         Console.WriteLine("Search for a book by author");
-                        string writer = Console.ReadLine();
+                        string writer = Console.ReadLine().ToLower();
                         User.SearchAuthor(writer, shelf);                      
                         break;
                     case 3:
                         Console.WriteLine("Search for a book by title");
+                        string title = Console.ReadLine().ToLower();
+                        User.SearchAuthor(title, shelf);
                         break;
                     case 4:
                         Console.WriteLine("Check out a book");
