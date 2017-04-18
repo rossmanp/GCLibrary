@@ -22,6 +22,14 @@ namespace GCLibrary
             this.due = null;
         }
 
+        public Book(string t, string a, bool c, DateTime? d)
+        {
+            this.title = t;
+            this.author = a;
+            this.checkedOut = c;
+            this.due = d;
+        }
+
         //get book's title
         public string getTitle()
         {
