@@ -64,13 +64,15 @@ namespace GCLibrary
             this.due = d;
             Console.WriteLine("Your due date is: " + due + ".");
         }
+
+        //create string to output to file
         public string toExportString()
         {
             string outputString = "";
-            outputString = this.title + "," +
-                            this.author + "," +
-                            this.checkedOut + "," +
-                            this.due;
+
+            outputString = string.Format("{0},{1},{2},{3}", 
+                            this.title, this.author, this.checkedOut, this.due);
+
             return outputString;
         }
 

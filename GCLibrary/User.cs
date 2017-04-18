@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,14 @@ namespace GCLibrary
 {
     class User
     {
+        static string bookCheck;
+        static string bookCheckKeepCase;
+
+        public User() { }
+
+
         public static void ListBooks(List<Book> books)
-        {
+        {            
             Console.WriteLine("\nAvailable Titles:");
             Console.WriteLine("===============================");
             for (int i = 0; i < books.Count; i++)
@@ -52,13 +59,11 @@ namespace GCLibrary
                 Console.WriteLine("Title: " + title);
                 Console.WriteLine("Author: " + author);
                 Console.WriteLine("Status: " + checkoutStatus);
-                Console.WriteLine("Due Date: " + dueDate + "\n");
+                Console.WriteLine("Due Date: " + dueDate + "\n");              
             }
+           
         }
-
-        static string bookCheck;
-        static string bookCheckKeepCase;
-
+        
         public static void CheckoutBook(List<Book> shelf)
         {
             Console.WriteLine("Which book would you like to checkout?");
@@ -78,6 +83,8 @@ namespace GCLibrary
                     {
                         Console.WriteLine("You have checked out " + bookCheckKeepCase + ".");
                         b.setCheckedOut(true);
+                        DateTime d = DateTime.Now.AddDays(14);
+                        b.setDue(d);
                         return;
                     }
                 }
@@ -130,4 +137,34 @@ namespace GCLibrary
         
 
     }
+
+     public class Search
+    {
+        public string name;
+        public int id;
+        public string title;
+
+        public Search(string name, int id, string title)
+        {
+            this.name = name;
+            this.id = id;
+            this.title = title;
+        }
+        public string Name
+        {
+            get { return name; }
+            private set { name = value; }
+        }
+        public int Id
+        {
+            get { return id; }
+            private set { id = value; }
+        }
+        public string Title
+        {
+            get { return title; }
+            private set { title = value; }
+        }
+    }
+   
 }

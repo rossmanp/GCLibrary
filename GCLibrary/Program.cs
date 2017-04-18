@@ -27,8 +27,9 @@ namespace GCLibrary
                 Console.WriteLine("Choose an option:");
                 Console.WriteLine("1 - Display book list \n2 - Search for a book by author");
                 Console.WriteLine("3 - Search for a book by title \n4 - Check out a book");
-                Console.WriteLine("5 - Return a book \n6 - Exit the library");
-                Console.WriteLine("Choice (1-6):");
+                Console.WriteLine("5 - Return a book \n6 - Load the book list \n7 - Save the book list");
+                Console.WriteLine("8 - Exit the library");
+                Console.WriteLine("Choice (1-8):");
                 while (IsNotInt)
                 {
                     IsNotInt = false;
@@ -38,7 +39,7 @@ namespace GCLibrary
                     }                 
                     catch (Exception)
                     {
-                        Console.WriteLine("Error: Invalid input. Please enter a number from 1 to 6:");
+                        Console.WriteLine("Error: Invalid input. Please enter a number from 1 to 8:");
                         IsNotInt = true;
                     }                    
                 }
@@ -51,7 +52,7 @@ namespace GCLibrary
                     case 2:
                         Console.WriteLine("Search for a book by author");
                         string writer = Console.ReadLine();
-                        User.SearchAuthor(writer, shelf);
+                        User.SearchAuthor(writer, shelf);                      
                         break;
                     case 3:
                         Console.WriteLine("Search for a book by title");
@@ -65,28 +66,33 @@ namespace GCLibrary
                         User.ReturnBook(shelf);                       
                         break;
                     case 6:
-                        Console.WriteLine("Goodbye!");
-                        run = false;
+                        Console.WriteLine("Book list loaded");
+                        //need to load the book list
+                        break;
+                    case 7:
+                        Console.WriteLine("Book list saved");
+                        FileIO.exportShelf(shelf);
+                        break;
+                    case 8:
+                        run = Continue();
                         break;
                     default:
-                        Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
+                        Console.WriteLine("Error, you did not input a number from 1-8. Please try again.");
                         break;
                 }                        
-                run = Continue();
             }
         }
         public static Boolean Continue()
         {
-            Console.WriteLine("Continue? (Y/N): ");
-            string input = Console.ReadLine();
+            Console.WriteLine("Are you sure you want to exit? (Y/N): ");
+            string input = Console.ReadLine().ToLower();
             Boolean run = true;
-            input = input.ToLower();
-            if (input == "n")
+            if (input.Equals("y"))
             {
                 Console.WriteLine("Goodbye!");
                 run = false;
             }
-            else if (input == "y")
+            else if (input.Equals("n"))
             {
                 run = true;
             }
