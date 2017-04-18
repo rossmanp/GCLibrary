@@ -49,7 +49,7 @@ namespace GCLibrary
                         User.ListBooks(shelf);
                         break;
                     case 2:
-                        Console.WriteLine("Search for a book by author");
+                        Console.WriteLine("Search for a book by author");                             
                         break;
                     case 3:
                         Console.WriteLine("Search for a book by title");
@@ -65,12 +65,19 @@ namespace GCLibrary
                     case 6:
                         run = Continue();
                         break;
+                    case 7:
+                        Console.WriteLine("Book list saved");
+                        FileIO.exportShelf(shelf);
+                        break;
+                    case 8:
+                        Console.WriteLine("Book list loaded");
+                        //need to load the book list
+                        break;
                     default:
                         Console.WriteLine("Error, you did not input a number from 1-6. Please try again.");
                         break;
                 }                        
             }
-
         }
 
         public static Boolean Continue()
