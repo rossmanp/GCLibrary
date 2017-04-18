@@ -120,22 +120,31 @@ namespace GCLibrary
         //b for book
         public static void SearchAuthor(string s, List<Book> bookshelf)
         {
+            int found = 0;
             foreach (Book book in bookshelf)
             {
                 string author = book.getAuthor().ToLower();
                 if (s.Equals(author))
                 {
                     Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
-                }
-                else
+                    found++;
+                }   
+            }
+            Console.WriteLine(found + " matches for your search.");
+            
+        }
+        public static void SearchTitle(string s, List<Book> bookshelf)
+        {
+            int found = 0;
+            foreach (Book book in bookshelf)
+            {
+                string title = book.getTitle().ToLower();
+                if (s.Equals(title))
                 {
-                    string title = book.getTitle().ToLower();
-                    if (s.Equals(title))
-                    {
-                        Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
-                    }
+                    Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
                 }
             }
+            Console.WriteLine(found + " matches for your search.");
         }
     }
 }

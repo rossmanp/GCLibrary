@@ -59,7 +59,7 @@ namespace GCLibrary
                     case 3:
                         Console.WriteLine("Search for a book by title");
                         string title = Console.ReadLine().ToLower();
-                        User.SearchAuthor(title, shelf);
+                        User.SearchTitle(title, shelf);
                         break;
                     case 4:
                         Console.WriteLine("Check out a book");
