@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace GCLibrary
 {
-    public partial class Main : Form
+    public partial class fMain : Form
     {
-        public Main()
+        public fMain(List<Book> shelf)
         {
             InitializeComponent();
+
+            lbAvailableBooks.DataSource = shelf;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
