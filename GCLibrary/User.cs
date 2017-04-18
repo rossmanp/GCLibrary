@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 namespace GCLibrary
 {
     class User
-    {          
+    {
+        static string bookCheck;
+        static string bookCheckKeepCase;
+
         public User() { }
 
         public static void ListBooks(List<Book> books)
-        {
-            
-
+        {            
             Console.WriteLine("\nAvailable Titles:");
             Console.WriteLine("===============================");
             for (int i = 0; i < books.Count; i++)
@@ -57,18 +58,11 @@ namespace GCLibrary
                 Console.WriteLine("Title: " + title);
                 Console.WriteLine("Author: " + author);
                 Console.WriteLine("Status: " + checkoutStatus);
-                Console.WriteLine("Due Date: " + dueDate + "\n");
-
-                
-               
+                Console.WriteLine("Due Date: " + dueDate + "\n");              
             }
            
         }
-
-
-        static string bookCheck;
-        static string bookCheckKeepCase;
-
+        
         public static void CheckoutBook(List<Book> shelf)
         {           
             Console.WriteLine("Which book would you like to checkout?");

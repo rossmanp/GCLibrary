@@ -26,8 +26,8 @@ namespace GCLibrary
                 Console.WriteLine("Choose an option:");
                 Console.WriteLine("1 - Display book list \n2 - Search for a book by author");
                 Console.WriteLine("3 - Search for a book by title \n4 - Check out a book");
-                Console.WriteLine("5 - Return a book \n6 - Exit the library \n7 - Save the book list");
-                Console.WriteLine("6 - Load the book list");
+                Console.WriteLine("5 - Return a book \n6 - Load the book list \n7 - Save the book list");
+                Console.WriteLine("8 - Exit the library");
                 Console.WriteLine("Choice (1-8):");
                 while (IsNotInt)
                 {
@@ -64,15 +64,15 @@ namespace GCLibrary
                         User.ReturnBook(shelf);                       
                         break;
                     case 6:
-                        run = Continue();
+                        Console.WriteLine("Book list loaded");
+                        //need to load the book list
                         break;
                     case 7:
                         Console.WriteLine("Book list saved");
                         FileIO.exportShelf(shelf);
                         break;
                     case 8:
-                        Console.WriteLine("Book list loaded");
-                        //need to load the book list
+                        run = Continue();
                         break;
                     default:
                         Console.WriteLine("Error, you did not input a number from 1-8. Please try again.");
