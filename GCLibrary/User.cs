@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace GCLibrary
 
         public static void ListBooks(List<Book> books)
         {
+            
+
             Console.WriteLine("\nAvailable Titles:");
             Console.WriteLine("===============================");
             for (int i = 0; i < books.Count; i++)
@@ -55,7 +58,11 @@ namespace GCLibrary
                 Console.WriteLine("Author: " + author);
                 Console.WriteLine("Status: " + checkoutStatus);
                 Console.WriteLine("Due Date: " + dueDate + "\n");
+
+                
+               
             }
+           
         }
 
 
