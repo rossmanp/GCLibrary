@@ -12,8 +12,7 @@ namespace GCLibrary
 
         public static void exportShelf(List<Book> shelf)
         {
-            var csv = new StringBuilder();
-            
+            var csv = new StringBuilder();            
 
             //keep adding each book's information to a list line by line
             //seperated by commas

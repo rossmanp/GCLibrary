@@ -127,12 +127,12 @@ namespace GCLibrary
                 string author = book.getAuthor().ToLower();
                 if (author.Contains(s))
                 {
+                    
                     Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
                     found++;
                 }   
             }
-            Console.WriteLine(found + " matches for your search.");
-            
+                Console.WriteLine(found + " matches found.\n");
         }
         //this method compares user input to every title in book list
         //and returns title and author
@@ -146,11 +146,13 @@ namespace GCLibrary
                 string title = book.getTitle().ToLower();
                 if (title.Contains(s))
                 {
-                    Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
+                    Console.WriteLine(book.getTitle() + " by\n " + book.getAuthor());
                     found++;
                 }
             }
-            Console.WriteLine(found + " matches for your search.");
+            
+            Console.WriteLine(found + " matches found.\n");
+
         }
     }
 }
