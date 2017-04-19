@@ -14,6 +14,8 @@ namespace GCLibrary
         private bool checkedOut; 
         private DateTime? due;
 
+        //Title, Author
+        //New books added won't be checked out by default, so checkedOut and due default to false and null
         public Book(string t, string a)
         {
             this.title = t;
@@ -22,6 +24,8 @@ namespace GCLibrary
             this.due = null;
         }
 
+        //Title, Author, Checked Out, Due Date
+        //Used for importing library from external file
         public Book(string t, string a, bool c, DateTime? d)
         {
             this.title = t;
@@ -29,6 +33,7 @@ namespace GCLibrary
             this.checkedOut = c;
             this.due = d;
         }
+
         //get book's title
         public string getTitle()
         {
