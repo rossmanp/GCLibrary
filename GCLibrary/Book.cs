@@ -8,16 +8,10 @@ namespace GCLibrary
 {
     public class Book
     {
-
         private string title;
         private string author;
         private bool checkedOut; 
         private DateTime? due;
-
-        public Book()
-        {
-
-        }
 
         //Title, Author
         //New books added won't be checked out by default, so checkedOut and due default to false and null

@@ -17,6 +17,7 @@ namespace GCLibrary
 
         public static void ListBooks(List<Book> books)
         {
+            Console.WriteLine("\nThere are " + books.Count + " books in the library.");
             Console.WriteLine("\nAvailable Titles:");
             Console.WriteLine("===============================");
             for (int i = 0; i < books.Count; i++)
