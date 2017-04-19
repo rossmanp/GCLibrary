@@ -14,6 +14,11 @@ namespace GCLibrary
         private bool checkedOut; 
         private DateTime? due;
 
+        public Book()
+        {
+
+        }
+
         public Book(string t, string a)
         {
             this.title = t;
@@ -49,7 +54,7 @@ namespace GCLibrary
 
         public void setCheckedOut(bool checkout)
         {
-            this.checkedOut = checkout;
+            this.checkedOut = checkout;            
         }
 
         //retreive due date of checked out book if its checked out
@@ -83,6 +88,20 @@ namespace GCLibrary
 
             return outputString;
         }
+
+        //public Book GetBook(string s)
+        //{
+
+        //    foreach (Book b in shelf)
+        //    {
+        //        if (s.Equals(b.title))
+        //        {
+        //            return b;
+        //        }
+        //    }
+        //    Console.WriteLine("I'm sorry, that book cannot be found");
+        //    return null;
+        //}
 
     }
 }

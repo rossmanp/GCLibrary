@@ -31,12 +31,12 @@ namespace GCLibrary
 
             while (run)
             {
-                Console.WriteLine("Choose an option:");
+                Console.WriteLine("\nChoose an option:");
                 Console.WriteLine("1 - Display book list \n2 - Search for a book by author");
                 Console.WriteLine("3 - Search for a book by title \n4 - Check out a book");
                 Console.WriteLine("5 - Return a book \n6 - Load the book list \n7 - Save the book list");
                 Console.WriteLine("8 - Exit the library");
-                Console.WriteLine("Choice (1-8):");
+                Console.Write("Choice (1-8):");
                 while (IsNotInt)
                 {
                     IsNotInt = false;
@@ -68,8 +68,10 @@ namespace GCLibrary
                         User.SearchTitle(title, shelf);
                         break;
                     case 4:
-                        Console.WriteLine("Check out a book");
-                        User.CheckoutBook(shelf);
+                        Console.WriteLine("\nCheck out a book");
+                        Console.WriteLine("\nWhich book would you like to check out?");
+                        string query = Console.ReadLine();
+                        User.CheckoutBook(shelf, query);
                         break;
                     case 5:
                         Console.WriteLine("Return a book");
@@ -113,5 +115,8 @@ namespace GCLibrary
             }
             return run;
         }
-    }
+
+        
+        }
+
 }

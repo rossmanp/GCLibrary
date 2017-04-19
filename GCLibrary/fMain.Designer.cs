@@ -54,6 +54,7 @@
             this.bCheckout.TabIndex = 1;
             this.bCheckout.Text = "Checkout";
             this.bCheckout.UseVisualStyleBackColor = true;
+            this.bCheckout.Click += new System.EventHandler(this.bCheckout_Click);
             // 
             // lAvailableBooks
             // 
@@ -76,7 +77,7 @@
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(100, 195);
+            this.bSearch.Location = new System.Drawing.Point(13, 195);
             this.bSearch.Name = "bSearch";
             this.bSearch.Size = new System.Drawing.Size(75, 23);
             this.bSearch.TabIndex = 4;
@@ -102,7 +103,7 @@
             // 
             // bSave
             // 
-            this.bSave.Location = new System.Drawing.Point(13, 226);
+            this.bSave.Location = new System.Drawing.Point(197, 195);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(75, 23);
             this.bSave.TabIndex = 7;
