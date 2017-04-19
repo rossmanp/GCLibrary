@@ -116,15 +116,16 @@ namespace GCLibrary
             }
             Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
         }
-        //string s is or search
-        //b for book
+        //this method compares user input to every author in book
+        //also, user doesnt have to input entire title or even entire word
+        //displays number of matches as well
         public static void SearchAuthor(string s, List<Book> bookshelf)
         {
             int found = 0;
             foreach (Book book in bookshelf)
             {
                 string author = book.getAuthor().ToLower();
-                if (s.Equals(author))
+                if (author.Contains(s))
                 {
                     Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
                     found++;
@@ -133,15 +134,20 @@ namespace GCLibrary
             Console.WriteLine(found + " matches for your search.");
             
         }
+        //this method compares user input to every title in book list
+        //and returns title and author
+        //also, user doesnt have to input entire title or een entire word
+        //displays number of matches as well
         public static void SearchTitle(string s, List<Book> bookshelf)
         {
             int found = 0;
             foreach (Book book in bookshelf)
             {
                 string title = book.getTitle().ToLower();
-                if (s.Equals(title))
+                if (title.Contains(s))
                 {
                     Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
+                    found++;
                 }
             }
             Console.WriteLine(found + " matches for your search.");

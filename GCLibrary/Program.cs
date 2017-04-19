@@ -21,7 +21,6 @@ namespace GCLibrary
             Application.SetCompatibleTextRenderingDefault(false);
             
             Console.WriteLine("Welcome to the Grand Circus Library!");
-            //Shelf s = new Shelf();
             List<Book> shelf = new List<Book>(); 
             FileIO.importShelf(shelf);
             Application.Run(new fMain(shelf));
