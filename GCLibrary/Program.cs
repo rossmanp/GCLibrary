@@ -74,7 +74,9 @@ namespace GCLibrary
                         break;
                     case 5:
                         Console.WriteLine("Return a book");
-                        User.ReturnBook(shelf);                       
+                        Console.WriteLine("\nWhich book would you like to return?");
+                        query = Console.ReadLine();
+                        User.ReturnBook(shelf, query);                       
                         break;
                     case 6:
                         Console.WriteLine("Book list loaded");
@@ -93,6 +95,8 @@ namespace GCLibrary
                 }                        
             }
         }
+
+
         public static Boolean Continue()
         {
             Console.WriteLine("Are you sure you want to exit? (Y/N): ");

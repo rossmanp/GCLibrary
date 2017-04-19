@@ -89,10 +89,10 @@ namespace GCLibrary
             Console.WriteLine("\nI'm sorry, we could not find " + bookCheckKeepCase + " in the library.");
         }
 
-        public static void ReturnBook(List<Book> shelf)
+        public static void ReturnBook(List<Book> shelf, string query)
         {
-            Console.WriteLine("\nWhich book would you like to return?");
-            bookCheck = Console.ReadLine();
+            
+            bookCheck = query;
             bookCheckKeepCase = bookCheck;
             bookCheck = bookCheck.ToLower();
 
