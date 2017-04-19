@@ -12,7 +12,16 @@ namespace GCLibrary
 
         public static void exportShelf(List<Book> shelf)
         {
+<<<<<<< HEAD
             var csv = new StringBuilder();            
+||||||| merged common ancestors
+            var csv = new StringBuilder();
+            
+
+=======
+            var csv = new StringBuilder();            
+
+>>>>>>> b11869f1cf0f07edad07ce055947c1d9de9b112a
             //keep adding each book's information to a list line by line
             //seperated by commas
             foreach (Book b in shelf)
@@ -21,8 +30,15 @@ namespace GCLibrary
             }
 
             //write to a file, create the file if needed
+<<<<<<< HEAD
             File.WriteAllText(filePath, String.Empty);
             File.WriteAllText(filePath, csv.ToString());           
+||||||| merged common ancestors
+            File.WriteAllText(filePath, csv.ToString());
+=======
+            File.WriteAllText(filePath, csv.ToString());
+            
+>>>>>>> b11869f1cf0f07edad07ce055947c1d9de9b112a
         }
 
         public static void importShelf(List<Book> shelf)

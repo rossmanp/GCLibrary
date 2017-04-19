@@ -23,8 +23,11 @@ namespace GCLibrary
             {
                 lbAvailableBooks.Items.Add(shelf.ElementAt(i).getTitle());
             }
+        }
 
-            //lbAvailableBooks.Items.AddRange(shelf.ToArray());
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
