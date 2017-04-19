@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +12,19 @@ namespace GCLibrary
   //Derek Wolters
   //Mike Spisich
   //Pete Rossman
+
     class Program
     {
         static void Main(string[] args)
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            
             Console.WriteLine("Welcome to the Grand Circus Library!");
             //Shelf s = new Shelf();
             List<Book> shelf = new List<Book>(); 
             FileIO.importShelf(shelf);
+            Application.Run(new fMain(shelf));
             bool run = true;
             int choice = 0;
             bool IsNotInt = true;

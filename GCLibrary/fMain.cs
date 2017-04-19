@@ -16,7 +16,12 @@ namespace GCLibrary
         {
             InitializeComponent();
 
-            lbAvailableBooks.DataSource = shelf;
+            for (int i = 0; i < shelf.Count; i++)
+            {
+                lbAvailableBooks.Items.Add(shelf.ElementAt(i).getTitle());
+            }
+
+            //lbAvailableBooks.Items.AddRange(shelf.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
