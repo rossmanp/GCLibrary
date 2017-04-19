@@ -1,10 +1,10 @@
-1984,DEREKGeorge Orwell,False,
+1984,George Orwell,False,
 Animal Farm,George Orwell,False,
-The Lord of the Rings: The Fellowship of the Ring,J.R.R. Tolkien,False,
-The Lord of the Rings: The Two Towers,J.R.R. Tolkien,False,
+The Lord of the Rings: The Fellowship of the Ring,J.R.R. Tolkien,False,5/3/2017 1:58:39 PM
+The Lord of the Rings: The Two Towers,J.R.R. Tolkien,True,5/3/2017 1:58:35 PM
 The Lord of the Rings: The Return of the King,J.R.R. Tolkien,False,
 Musashi,Eli Yoshikawa,False,
-The Heike Story,Eli Yoshikawa,False,
+The Heike Story,Eli Yoshikawa,False,5/3/2017 2:03:10 PM
 Taiko,Eli Yoshikawa,False,
 Dune,Frank Herbert,False,
 Dune Messiah,Frank Herbert,False,

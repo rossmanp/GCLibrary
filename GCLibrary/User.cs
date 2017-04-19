@@ -64,14 +64,11 @@ namespace GCLibrary
 
         }
 
-        public static void CheckoutBook(List<Book> shelf)
-        {
-            Console.WriteLine("Which book would you like to checkout?");
-
-            bookCheck = Console.ReadLine();
+        public static void CheckoutBook(List<Book> shelf, string query)
+        {           
+            bookCheck = query;
             bookCheckKeepCase = bookCheck;
             bookCheck = bookCheck.ToLower();
-
             //This loop checks each book in the shelf, and if the book is not checked out
             //and the user input matches the book's title, the book is checked out.
 
@@ -81,21 +78,21 @@ namespace GCLibrary
                 {
                     if (bookCheck.Equals(b.getTitle().ToLower()))
                     {
-                        Console.WriteLine("You have checked out " + bookCheckKeepCase + ".");
+                        Console.WriteLine("\nYou have checked out " + bookCheckKeepCase + ".");
                         b.setCheckedOut(true);
                         DateTime d = DateTime.Now.AddDays(14);
-                        b.setDue(d);
+                        b.setDue(d);                       
                         return;
                     }
                 }
             }
-            Console.WriteLine("I'm sorry, we could not find " + bookCheck + " in the library.");
+            Console.WriteLine("\nI'm sorry, we could not find " + bookCheckKeepCase + " in the library.");
         }
 
-        public static void ReturnBook(List<Book> shelf)
+        public static void ReturnBook(List<Book> shelf, string query)
         {
-            Console.WriteLine("Which book would you like to return?");
-            bookCheck = Console.ReadLine();
+            
+            bookCheck = query;
             bookCheckKeepCase = bookCheck;
             bookCheck = bookCheck.ToLower();
 
@@ -108,13 +105,13 @@ namespace GCLibrary
                 {
                     if (bookCheck.Equals(b.getTitle().ToLower()))
                     {
-                        Console.WriteLine("You have returned " + bookCheckKeepCase + ".");
+                        Console.WriteLine("\nYou have returned " + bookCheckKeepCase + ".");
                         b.setCheckedOut(false);
                         return;
                     }
                 }
             }
-            Console.WriteLine("I'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
+            Console.WriteLine("\nI'm sorry, we don't have a record of " + bookCheckKeepCase + " in our library.");
         }
         //this method compares user input to every author in book
         //also, user doesnt have to input entire title or even entire word
@@ -130,7 +127,7 @@ namespace GCLibrary
                     
                     Console.WriteLine(book.getTitle() + " by " + book.getAuthor());
                     found++;
-                }   
+                }
             }
                 Console.WriteLine(found + " matches found.\n");
         }
@@ -150,9 +147,8 @@ namespace GCLibrary
                     found++;
                 }
             }
-            
             Console.WriteLine(found + " matches found.\n");
-
         }
+
     }
 }

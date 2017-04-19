@@ -13,7 +13,6 @@ namespace GCLibrary
         public static void exportShelf(List<Book> shelf)
         {
             var csv = new StringBuilder();            
-
             //keep adding each book's information to a list line by line
             //seperated by commas
             foreach (Book b in shelf)
@@ -22,7 +21,9 @@ namespace GCLibrary
             }
 
             //write to a file, create the file if needed
-            File.WriteAllText(filePath, csv.ToString());
+
+            File.WriteAllText(filePath, String.Empty);
+            File.WriteAllText(filePath, csv.ToString());           
         }
 
         public static void importShelf(List<Book> shelf)
@@ -59,6 +60,7 @@ namespace GCLibrary
                 Book book = new Book(title, author, checkedOut, date);
                 shelf.Add(book);
             }
+            reader.Close();
         }
     }
 }
